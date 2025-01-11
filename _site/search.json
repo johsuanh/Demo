@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ISSS608 Visual Analytics",
+    "section": "",
+    "text": "Welcome to ISSS608 Visual Analytics and Applications"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hihi, my name is Johsuan. Welcome to my website :)"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on E00.html",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on E00.html",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "",
+    "text": "Getting started"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "",
+    "text": "Getting started\nLoading tidyverse onto r environment by using the code chunk below.\n\npacman::p_load(tidyverse)\n\n\n\nImporting data\n\nrealis_2019 &lt;- read_csv(\"data/REALIS2019.csv\")\n\n\npopdata_fat &lt;- read_csv(\"data/PopData2019_fat.csv\")\n\n\n\nPivoting data\n\npopdata_long &lt;- popdata_fat %&gt;%\n  pivot_longer(c(3,21),\n               names_to = \"Age Group\",\n               values_to = \"Population\")\n\n\n\nExport R data file (.rds)\n\nwrite_rds(popdata_long, \"data/rds/popdata_long.rds\")\n\n\n\nSelect and filter columns\n\nrealis2019_filtered &lt;- realis_2019 %&gt;%\n  select(`Project Name`, `Type of Sale`, `Transacted Price ($)`, `Property Type`, `Unit Price ($ psm)`) %&gt;%\n  filter(`Property Type` == \"Condominium\" | `Property Type` == \"Apartment\") %&gt;%\n  filter(`Type of Sale` == \"New Sale\") %&gt;%\n  filter(`Unit Price ($ psm)` &gt; 11000)"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#getting-started",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#getting-started",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "",
+    "text": "Loading tidyverse onto r environment by using the code chunk below.\n\npacman::p_load(tidyverse)"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#importing-data",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#importing-data",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "Importing data",
+    "text": "Importing data\n\nrealis_2019 &lt;- read_csv(\"data/REALIS2019.csv\")\n\n\npopdata_fat &lt;- read_csv(\"data/PopData2019_fat.csv\")"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#pivoting-data",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#pivoting-data",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "Pivoting data",
+    "text": "Pivoting data\n\npopdata_long &lt;- popdata_fat %&gt;%\n  pivot_longer(c(3,21),\n               names_to = \"Age Group\",\n               values_to = \"Population\")"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#export-r-data-file-.rds",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#export-r-data-file-.rds",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "Export R data file (.rds)",
+    "text": "Export R data file (.rds)\n\nwrite_rds(popdata_long, \"data/rds/popdata_long.rds\")"
+  },
+  {
+    "objectID": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#select-and-filter-columns",
+    "href": "Hands-on_Exercise/Hands-on_Exercise00/Hands-on_E00.html#select-and-filter-columns",
+    "title": "Hands-on Exercise 00: working with tidyverse",
+    "section": "Select and filter columns",
+    "text": "Select and filter columns\n\nrealis2019_filtered &lt;- realis_2019 %&gt;%\n  select(`Project Name`, `Type of Sale`, `Transacted Price ($)`, `Property Type`) %&gt;%\n  filter(`Property Type` == \"Condominium\" | `Property Type` == \"Apartment\") %&gt;%\n  filter(`Type of Sale` == \"New Sale\")"
+  }
+]

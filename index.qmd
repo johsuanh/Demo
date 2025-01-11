@@ -1,0 +1,7 @@
+---
+title: "ISSS608 Visual Analytics"
+---
+
+Welcome to **ISSS608 Visual Analytics and Applications**
+
+![](images/IMG_1657.png)
